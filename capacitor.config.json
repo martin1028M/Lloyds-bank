@@ -1,6 +1,6 @@
 {
   "appId": "com.cavan.bank",
-  "appName": "Cavan Bank",
+  "appName": "Lloyds",
   "webDir": "www",
   "plugins": {
     "LocalNotifications": {
