@@ -18,10 +18,4 @@ jobs:
       - run: npm install
       - run: npx cap add android
       - run: npx --yes @capacitor/assets generate --android --iconBackgroundColor '#11B67A' --iconBackgroundColorDark '#11B67A'
-      - run: sed -i 's#</manifest>#<uses-permission android:name="android.permission.POST_NOTIFICATIONS"/></manifest>#' android/app/src/main/AndroidManifest.xml
-      - run: npx cap sync android
-      - run: chmod +x android/gradlew && cd android && ./gradlew assembleDebug
-      - uses: actions/upload-artifact@v4
-        with:
-          name: cavan-bank-apk
-          path: android/app/build/outputs/apk/debug/app-debug.apk
+      - run: mkdir -p android/app/src/ma
