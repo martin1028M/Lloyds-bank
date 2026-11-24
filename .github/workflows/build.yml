@@ -17,6 +17,7 @@ jobs:
       - run: mkdir -p www && cp index.html www/index.html
       - run: npm install
       - run: npx cap add android
+      - run: npx --yes @capacitor/assets generate --android --iconBackgroundColor '#11B67A' --iconBackgroundColorDark '#11B67A'
       - run: sed -i 's#</manifest>#<uses-permission android:name="android.permission.POST_NOTIFICATIONS"/></manifest>#' android/app/src/main/AndroidManifest.xml
       - run: npx cap sync android
       - run: chmod +x android/gradlew && cd android && ./gradlew assembleDebug
